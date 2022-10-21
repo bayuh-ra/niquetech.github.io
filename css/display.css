@@ -1,0 +1,158 @@
+        /* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.display {
+  padding: 1.5em 1.2em;
+}
+.display caption {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1em 0;
+  text-align: left;
+}
+.display table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddc1bb;
+  border-radius: 0.25em;
+  margin: 0 0 1.5em 0;
+}
+.display table thead {
+  background-color: #ddc1bb;
+  color: white;
+}
+.display table thead tr th {
+  text-align: center;
+}
+.display table thead tr #billbooks-net-pay {
+
+}
+.display table tbody tr td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddc1bb;
+}
+            #payroll .display table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddc1bb;
+  border-radius: 0.25em;
+  margin: 0 0 1.5em 0;
+}
+#payroll .display table thead {
+  background-color: #ddc1bb;
+  color: white;
+}
+#payroll .display table thead tr th {
+  
+  text-align: center;
+}
+#payroll .display table thead tr #billbooks-net-pay {
+  width: 12.5em;
+}
+#payroll .display table tbody tr td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddc1bb;
+}
+            #payroll .display table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddc1bb;
+  border-radius: 0.25em;
+  margin: 0 0 1.5em 0;
+}
+#payroll .display table thead {
+  background-color: #ddc1bb;
+  color: white;
+}
+#payroll .display table thead tr th {
+  padding: 0.5em;
+  text-align: center;
+}
+#payroll .display table thead tr #billbooks-net-pay {
+  width: 12.5em;
+}
+#payroll .display table tbody tr td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddc1bb;
+}
+            #payroll .display table thead tr th {
+  padding: 0.5em;
+  text-align: left;
+}
+#payroll .display table thead tr #billbooks-net-pay {
+  width: 12.5em;
+}
+#payroll .display table tbody tr td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddc1bb;
+}
+#payroll .display table thead tr th {
+  padding: 0.5em;
+  text-align: left;
+}

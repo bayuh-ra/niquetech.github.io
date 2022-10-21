@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ALCAIDE</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="common.js" async></script>
+        <link href="css/display.css" rel="stylesheet" />
+    </head>
+    
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">ALCAIDE</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">Conversion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Income Tax Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Factorial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Simple Payroll</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">My CS 1130 Projects</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Welcome to my website! All my assignment in HTML and Javascript Programming are here. Have a look! </p>
+                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+<!--CONVERSTION -->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">CONVERSION</h2>
+                        <hr class="divider divider-light" />
+                        
+        <h2>TEMPERATURE</h2>
+            <p>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit">
+            <button onclick="temperatureConverter(this.value)">Convert</button>
+            </p>
+            <p>Celsius: <span id="outputCelcius"></span></p>
+
+            <script>
+            function temperatureConverter(valNum) {
+            valNum = document.getElementById("inputFahrenheit").value*1;
+            document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+            }
+            </script>
+
+            <p>
+            <input id="inputCelsius" type="number" placeholder="Celsius">
+            <button onclick="temperatureConverter2(this.value)">Convert</button>
+            </p>
+            <p>Fahrenheit: <span id="outputCelcius2"></span></p>
+
+            <script>
+            function temperatureConverter2(valNum) {
+            valNum = document.getElementById("inputCelsius").value*1;
+            document.getElementById("outputCelcius2").innerHTML=(valNum*1.8)+32;
+            }
+            </script>
+
+        <h2>LENGTH</h2>
+            <p>
+            <input id="inputMeters" type="number" placeholder="Meters">
+            <button onclick="LengthConverter(this.value)">Convert</button>
+            </p>
+            <p>Feet: <span id="outputFeet"></span></p>
+
+            <script>
+            function LengthConverter(valNum) {
+            valNum = document.getElementById("inputMeters").value*1;
+            document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+            }
+            </script>
+            
+            <p>
+            <input id="inputFeet" type="number" placeholder="Feet">
+            <button onclick="LengthConverter2(this.value)">Convert</button>
+            </p>
+            <p>Meters: <span id="outputMeters"></span></p>
+
+            <script>
+            function LengthConverter2(valNum) {
+            valNum = document.getElementById("inputFeet").value*1;
+            document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+            }
+            </script>
+    </section>
+                         
+<!-- Income Tax Calculator-->
+        <section class="page-section bg-primary" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Income Tax Calculator</h2>
+        <hr class="divider divider-light" />
+              
+            <p>
+                <label>Taxable Income</label>
+                <input id="inputTaxableIncome" type="number" placeholder="Taxable Income">
+                <button onclick="incomeTaxCalc(this.value)">Compute</button>
+            </p>
+            
+            <p>Income Tax: <span id="outputIncomeTax"></span></p>
+
+            <script>
+                var a, b, c, d, e;
+                a = 250000
+                b = 400000
+                c = 800000
+                d = 2000000
+                e = 8000000
+                var result = 0
+                function incomeTaxCalc(valNum) {
+                valNum = document.getElementById("inputTaxableIncome").value*1;
+                if (valNum <= a){
+                    document.getElementById("outputIncomeTax").innerHTML= result;
+                }
+                else if (valNum >= a && valNum <= b){
+                    result = (valNum - a)*.20
+                    document.getElementById("outputIncomeTax").innerHTML= result;
+                }
+                else if (valNum >= b && valNum <= c){
+                    result = (valNum - b)*.25 + 30000
+                    document.getElementById("outputIncomeTax").innerHTML= result;
+                }
+                else if (valNum >= c && valNum <= d){
+                    result = (valNum - c)*.30 + 130000
+                    document.getElementById("outputIncomeTax").innerHTML= result;
+                }
+                else if (valNum >= d && valNum <= e){
+                    result = (valNum - d)*.32 + 490000
+                    document.getElementById("outputIncomeTax").innerHTML= result;
+                }
+                else {
+                    result = (valNum - e)*.35 + 2410000
+                    document.getElementById("outputIncomeTax").innerHTML= result;
+                }
+            }
+            </script>
+        </section>
+<!--FACTORIAL-->
+        <section class="page-section bg-primary" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Nth Factorial</h2>
+                        <hr class="divider divider-light" />
+                        
+
+                <p>
+                    <label for="n">Input a value for n:</label>
+                    <input id="n" type="number"></input>
+            <button onclick="ShowNumbers()">Show Numbers</button>
+            </p>
+                <h3 id="ntitle"></h3>
+                <p id="nnumbers"></p>
+
+                <h3 id="ntitle2"></h3>
+                <p id="nnumbers2"></p>
+
+                <h3 id="ntitle3"></h3>
+                <p id="nnumbers3"></p>
+                
+                <script>
+                    function ShowNumbers() {
+                        var num1 = document.getElementById("n").value*1;
+                        document.getElementById("ntitle").innerHTML= "The factorial of "+num1+" is:";
+                        
+                        var result = num1;
+                        if (num1 == 0 || num1 == 1){
+                            result = 1;
+                        }
+                        while (num1 > 1) { 
+                            num1--;
+                            result *= num1;
+                        }
+                        document.getElementById("nnumbers").innerHTML=result;
+
+                        var num2 = document.getElementById("n").value*1;
+                        document.getElementById("ntitle2").innerHTML= "The sum of first "+num2+" numbers are:";
+                        
+                        let sum = 0, i = 1;
+                        do {
+                            sum += i;
+                            i++;
+                        }
+                        while(i <= num2);
+                        if (num2 == 0){
+                            sum = 0;
+                        }
+                        document.getElementById("nnumbers2").innerHTML=sum;
+                        var num3 = document.getElementById("n").value*1;
+                        document.getElementById("ntitle3").innerHTML= "The average of the first "+num3+" numbers are:";
+                        let sum2 = 0;
+                        for (let z = 1; z <= num3; z++) {
+                            sum2 += z;
+                            average = sum2 / num3;
+                        }
+                        if (num2 == 0){
+                            average = 0;
+                        }
+                        document.getElementById("nnumbers3").innerHTML=average;
+                    }
+                </script>
+            </div>
+        </div>
+    </section>                      
+<!-- SIMPLE PAYROLL-->
+        <section class="page-section bg-primary" id="control-panel">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Simple Payroll</h2>
+                        <hr class="divider divider-light" />
+                        
+        <!-- Payroll Form -->
+        <form class="billbooks" id="payroll-form">
+            <p>
+          <label for="payroll-name">Employee Name
+            <input type="text" id="payroll-name" name="payroll-name" placeholder="Juan Dela Cruz" required>
+          </label>
+                </p>
+            <p>
+          <label for="payroll-days">Days Worked
+            <input type="number" id="payroll-days" name="payroll-days" placeholder="#" step="0.01" required>
+          </label>
+                </p>
+            <p>
+          <label for="payroll-rate">Daily Rate
+            <input type="number" id="payroll-rate" name="payroll-rate" placeholder="₱" step="0.01" required>
+          </label>
+                </p>
+            <p>
+          <label for="payroll-deduction">Deduction Amount
+            <input type="number" id="payroll-deduction" name="payroll-deduction" placeholder="₱" step="0.01" required>
+          </label>
+                </p>
+          <button type="submit" id="payroll-add-entry">Add Entry</button>
+        </form>
+
+        <hr>
+
+        <!-- Deletion Form -->
+        <form class="billbooks" id="payroll-delete">
+          <label for="payroll-id">Delete Entry No.
+            <input type="number" id="payroll-id" name="payroll-id" placeholder="No." required>
+          </label>
+          <button type="submit" id="payroll-remove-entry">Remove Entry</button>
+        </form>
+
+        <form class="billbooks" id="payroll-delete-all">
+          <button type="submit" id="payroll-remove-all">Clear All</button>
+        </form>
+      <section class="display">
+        <table id="payroll-table">
+          <thead>
+            <tr >
+              <th>No.</th>
+              <th>Employee Name</th>
+              <th>Days Worked</th>
+              <th>Daily Rate</th>
+              <th>Gross Pay</th>
+              <th>Deduction Amount</th>
+              <th id="billbooks-net-pay">Net Pay</th>
+            </tr>
+          </thead>
+          <tbody id="payroll-table-body">
+          </tbody>
+        </table>
+      </section>
+
+      <!--TODO: JAVASCRIPT CALCULATION AND DOM MANIPULATION -->
+      <script>        
+        // ACCESS HTML ELEMENTS
+        const payrollForm = document.getElementById('payroll-form');
+        const payrollDelete = document.getElementById('payroll-delete');
+        const payrollDeleteAll = document.getElementById('payroll-delete-all');
+        const payrollTable = document.getElementById('payroll-table');
+        const payrollTableBody = document.getElementById('payroll-table-body');
+
+        // DISPLAY AS CURRENCY WITHOUT THE SIGN
+        const addComma = number => {
+          return number.toLocaleString('en', { 
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2 
+          });;
+        }
+
+        // INITIALIZE VARIABLES
+        let payrollEntries = [];
+        
+        // ADD ENTRY
+        payrollForm.addEventListener('submit', event => {
+          event.preventDefault();
+          const payrollName = document.getElementById('payroll-name').value;
+          const payrollDays = document.getElementById('payroll-days').value;
+          const payrollRate = document.getElementById('payroll-rate').value;
+          const payrollDeduction = document.getElementById('payroll-deduction').value;
+          const payrollGrossPay = payrollDays * payrollRate;
+          const payrollNetPay = payrollGrossPay - payrollDeduction;
+          const payrollEntry = {
+            name: payrollName,
+            days: payrollDays,
+            rate: payrollRate,
+            deduction: payrollDeduction,
+            grossPay: payrollGrossPay,
+            netPay: payrollNetPay
+          };
+          payrollEntries.push(payrollEntry);
+          payrollForm.reset();
+          payrollTableBody.innerHTML = '';
+          payrollEntries.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${index + 1}</td>
+              <td>${entry.name}</td>
+              <td>${entry.days}</td>
+              <td>${addComma(entry.rate)}</td>
+              <td>${addComma(entry.grossPay)}</td>
+              <td>${addComma(entry.deduction)}</td>
+              <td>₱${addComma(entry.netPay)}</td>
+            `;
+            payrollTableBody.appendChild(row);
+          });
+        });
+
+        // REMOVE ENTRY
+        payrollDelete.addEventListener('submit', event => {
+          event.preventDefault();
+          const payrollId = document.getElementById('payroll-id').value;
+          payrollEntries.splice(payrollId - 1, 1);
+          payrollDelete.reset();
+          payrollTableBody.innerHTML = '';
+          payrollEntries.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${index + 1}</td>
+              <td>${entry.name}</td>
+              <td>${entry.days}</td>
+              <td>${addComma(entry.rate)}</td>
+              <td>${addComma(entry.grossPay)}</td>
+              <td>${addComma(entry.deduction)}</td>
+              <td>₱${addComma(entry.netPay)}</td>
+            `;
+            payrollTableBody.appendChild(row);
+          });
+        });
+
+        // REMOVE ALL
+        payrollDeleteAll.addEventListener('submit', event => {
+          event.preventDefault();
+          const actionConfirmed = confirm('Are you sure you want to clear all entries?')
+
+          if (actionConfirmed) {
+            payrollEntries = [];
+            payrollTableBody.innerHTML = '';
+          }
+        });
+    </script>
+
+      <!--!---------------- APP WINDOW AND SCRIPT ENDS HERE ------------------->
+
+
+
+
+    </div></div></div>
+</section> 
+</body>
+</html>

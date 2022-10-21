@@ -1,0 +1,63 @@
+<html>
+    <head></head>
+    <body>
+        <!--feet to meter -->
+        <script language='JavaScript' type='text/JavaScript'>
+            function validate(type1) {
+                if(document.form1.textinput1.value=='')
+                {
+                    alert('Fill the Input box before submitting');
+                    return false;
+                }else{
+                    if(type1=="to_feet"){
+                        var res=3.2808*document.form1.textinput1.value;
+                        var unit=" feet";
+                    }else{
+                        var res=0.3048*document.form1.textinput1.value;
+                        var unit=" meter";
+                    }
+                    document.getElementById("result1").innerHTML=res.toFixed(2) + unit;
+                    
+                }
+            }
+        </script>
+        <div>
+            <form name='form1' action='' method='post1' onSubmit='return validate(type1);'>
+                Input :<input type=text name=textinput1 size=10>
+                <input type=button value='Convert to Feet' onClick=validate('to_feet');>
+                <input type=button value='Convert to Meter' onClick=validate('to_meter');>
+            </form>
+            <div id=result1></div>
+        </div>
+        
+        <!--FAHRENHEIT TO CELSIUS -->        
+        <script language='JavaScript' type='text/JavaScript'>
+            function validate(type2) {
+                if(document.form2.textinput2.value=='')
+                {alert('Fill the Input box before submitting');
+                 return false;
+                }else{
+                    if(type2=="to_celsius"){
+                        var res=(document.form2.textinput2.value-32)*5/9;
+                        var unit=" celsius";
+                    }else{
+                        var res=(document.form2.textinput2.value*9/5)+32;
+                        var unit=" fahrenheit";
+                    }
+                    document.getElementById("result2").innerHTML=res.toFixed(3) + unit;
+                    return false;
+                }
+            }
+        </script>
+        <div>
+            <form name='form2' action='' method='post2' onSubmit='return validate(type2);'>
+                Input :<input type=text name=textinput2 size=10>
+                <input type=button value='Convert to Celcius' onClick=validate('to_celsius');>
+                <input type=button value='Convert to Fahrenheit' onClick=validate('to_fahrenheit');>
+            </form>
+            <div id=result2></div> 
+        </div>    
+    </body>
+</html>
+
+
